@@ -7,7 +7,7 @@ const SearchParams = () => {
 const [location, setLocation] =useState("");
 const [animal, setAnimal] = useState("");
 const [breed, setBreed] = useState("");
-const [breeds] = ["poodle", "bichon"];
+const breeds = ["poodle", "bichon"];
 
 /* const sum = (x, y) => {
   return x + y;
