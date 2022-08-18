@@ -1,41 +1,16 @@
 import React from "react";
-import Pet from "./Pet";
 import { render } from "react-dom"; // // or ReactDOM.render and then ReactDOM.render at the end of the file
 
+import SearchParams from "./SearchParams";
+
 const App = () => {
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h1", {}, "Adopt Me!"),
-    React.createElement(
-      Pet,
-      {
-        name: "Lume",
-        animal: "Dog",
-        breed: "Labrador Retriever",
-      },
-      "Adopt Me!"
-    ),
-    React.createElement(
-      Pet,
-      {
-        name: "Perdita",
-        animal: "Dog",
-        breed: "Pbgv",
-      },
-      "Adopt Me!"
-    ),
-    React.createElement(
-      Pet,
-      {
-        name: "Mancha",
-        animal: "Dog",
-        breed: "Shih Tzu",
-      },
-      "Adopt Me!"
-    )
-  );
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <SearchParams/>
+    </div>
+    );
 };
 
-//ReactDOM.render if {ReactDOM} is imported
-render(React.createElement(App), document.getElementById("root"));
+//ReactDOM.render if {ReactDOM} is imported. This is used in Platform
+render(<App/>, document.getElementById("root"));
